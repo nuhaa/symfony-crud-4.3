@@ -1,0 +1,15 @@
+tutorial dari
+https://medium.com/@votanlean/create-a-basic-crud-website-with-symfony-4-2-and-some-command-line-helpers-3719677d0e
+
+symfony 4.3.3
+step by step
+1. install composer create-project symfony/website-skeleton my_project_name
+2. set database di .env
+3. bin/console doctrine:database:create (buat database lewat console)
+4. bin/console make:entity (buat entitas dari database yang sudah dibuat)
+5. bin/console make:fixtures (untuk dummy data)
+6. tambahkan data dummy sesuai keinginan di src/DataFixtures/ArtikelFixtures
+7. bin/console doctrine:fixtures:load (untuk generate data dummy)
+8. bin/console doctrine:query:sql "select * from artikel" (untuk cek data di database)
+9. bin/console make:crud (generate crud)
+10. composer require knplabs/knp-paginator-bundle (menambahkan pagination)

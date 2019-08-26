@@ -1,0 +1,36 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Artikel index{% endblock %}
+
+{% block body %}
+    <h1>Artikel index</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for artikel in pagination %}
+            <tr>
+                <td>{{ artikel.id }}</td>
+                <td>{{ artikel.name }}</td>
+                <td>
+                    <a href="{{ path('artikel_show', {'id': artikel.id}) }}">show</a>
+                    <a href="{{ path('artikel_edit', {'id': artikel.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="3">no records found</td>
+            </tr>
+        {% endfor %}
+        {{ knp_pagination_render(pagination) }}
+        </tbody>
+    </table>
+
+    <a href="{{ path('artikel_new') }}">Create new</a>
+{% endblock %}
