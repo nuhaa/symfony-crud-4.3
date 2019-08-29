@@ -13,3 +13,14 @@ step by step
 8. bin/console doctrine:query:sql "select * from artikel" (untuk cek data di database)
 9. bin/console make:crud (generate crud)
 10. composer require knplabs/knp-paginator-bundle (menambahkan pagination)
+
+- Webpack Encore
+  -> composer require symfony/webpack-encore-bundle
+  -> yarn install
+  perintah dasar encore
+   yarn encore dev -> compile assets once
+   yarn encore dev --watch -> compile assets automatically when files change
+   yarn encore production -> on deploy, create a production build
+ - public/build/app.js (holds all the JavaScript for your "app" entry)
+ - public/build/app.css (holds all the CSS for your "app" entry)
+ - public/build/runtime.js (a file that helps Webpack do its job)
