@@ -24,3 +24,11 @@ step by step
  - public/build/app.js (holds all the JavaScript for your "app" entry)
  - public/build/app.css (holds all the CSS for your "app" entry)
  - public/build/runtime.js (a file that helps Webpack do its job)
+
+- Generate Login Form
+  1. php bin/console make:user
+  2. php bin/console make:auth
+  3. php bin/console make:entity (user)
+  4. php bin/console make:migration
+  5. php bin/console doctrine:migration:migrate
+  6. php bin/console make:registration-form
